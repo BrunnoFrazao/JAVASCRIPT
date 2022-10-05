@@ -10,19 +10,17 @@
     <h1>Sua nacionalidade é Brasileira?</h1>
     Digite o seu país de origem: <input type="text" name="origem" id="origem">
     <input type="button" value="Verificar" onclick="verificar()">
-    <div id="nac"></div>
+    <div id="nac">
+
+    </div>
     
     <script>
-        function verificar {
-            var txtv = document.querySelector('input#origem')
-            var nac = document.querySelector('div#nac') 
-            nac.innerHTML('Você é Brasileiro')
-            if (txtv == Brasil){
-                txtv.innerHTML('Você é Brasileiro')
-            }
-            else{
-                nac.innerHTML('Você é Gringo!')
-            }
+        function verificar() {
+            var org = document.querySelector('input#origem')
+            var nac = document.querySelector('div#nac')
+            var pais = (org.value)     
+            nac.innerHTML = `<p>Você mora no(a):<strong> ${pais}</strong></p>`
+            
         }
     </script>
 
